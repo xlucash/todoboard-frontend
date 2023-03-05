@@ -19,9 +19,18 @@ function App() {
 
 
   return (
-    <div>
-      <h2>My Task List</h2>
-      <ListTask myTaskList={taskList} />
+    <div id="content">
+      <div id="whiteboard">
+        <div id="text">
+          <h2>My Task List</h2>
+        </div>
+        <div class="row">
+          <ListTask myTaskList={taskList} />
+        </div>
+        <div id="eraser"></div>
+        <div id="red-pen"></div>
+        <div id="blue-pen"></div>
+      </div>
     </div>
   );
 }
