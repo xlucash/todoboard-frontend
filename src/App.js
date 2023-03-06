@@ -14,7 +14,37 @@ function App() {
     id: 2,
     title: 'Task 2',
     description: 'This is test task 2',
-    date: new Date().toLocaleString()
+    date: new Date().toLocaleDateString()
+  },
+  {
+    id: 3,
+    title: 'Task 3',
+    description: 'This is test task 3',
+    date: new Date().toLocaleDateString()
+  },
+  {
+    id: 4,
+    title: 'Task 4',
+    description: 'This is test task 4',
+    date: new Date().toLocaleDateString()
+  },
+  {
+    id: 5,
+    title: 'Task 5',
+    description: 'This is test task 5',
+    date: new Date().toLocaleDateString()
+  },
+  {
+    id: 6,
+    title: 'Task 6',
+    description: 'This is test task 6',
+    date: new Date().toLocaleDateString()
+  },
+  {
+    id: 7,
+    title: 'Task 7',
+    description: 'This is test task 7',
+    date: new Date().toLocaleDateString()
   }];
 
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Task from "./Task";
+import './App.css'
 
 export default function ListTask({myTaskList}) {
     const [ detailId, updateDetailId ] = useState('');
@@ -10,9 +11,10 @@ export default function ListTask({myTaskList}) {
     }
 
     const listTaskHtml = myTaskList.map(task => 
-        <div key={task.id}>
+        <div className="col" key={task.id}>
             <Task myTask={task} handleTaskClick={handleTaskClick} />
         </div>
+        
     );
 
     function getDetailTaskHtml() {

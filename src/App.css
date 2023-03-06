@@ -97,6 +97,22 @@
   text-align: center;
 }
 
+#row-rev {
+  flex-direction: row-reverse;
+}
+
+.row {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.col {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
 
 body{margin-top:0px;}
 
@@ -130,10 +146,6 @@ body{margin-top:0px;}
 .card.card-just-text .content {
     padding: 15px; 
     text-align: center;
-}
-
-.card[data-color="blue"] .category {
-    color: #7a9e9f;
 }
 
 .card-big-shadow:before {
@@ -188,6 +200,16 @@ a:hover, a:focus {
 }
 .card[data-color="green"] .category {
     color: #92ac56;
+}
+
+.card[data-color="red"] {
+  background: #e5a3a3;
+}
+.card[data-color="red"] .description {
+  color: #773d3d;
+}
+.card[data-color="red"] .category {
+  color: #ac5656;
 }
 
 .card[data-color="yellow"] {
