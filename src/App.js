@@ -2,66 +2,40 @@ import logo from './logo.svg';
 import './App.css';
 import Task from './Task';
 import ListTask from './ListTask';
+import CreateTask from './CreateTask';
+import { BrowserRouter, Route, Routes, Link, useNavigate } from 'react-router-dom';
 
 function App() {
-  const taskList = [{
-    id: 1,
-    title: 'Task 1',
-    description: 'This is test task 1',
-    date: new Date().toLocaleString()
-  },
-  {
-    id: 2,
-    title: 'Task 2',
-    description: 'This is test task 2',
-    date: new Date().toLocaleDateString()
-  },
-  {
-    id: 3,
-    title: 'Task 3',
-    description: 'This is test task 3',
-    date: new Date().toLocaleDateString()
-  },
-  {
-    id: 4,
-    title: 'Task 4',
-    description: 'This is test task 4',
-    date: new Date().toLocaleDateString()
-  },
-  {
-    id: 5,
-    title: 'Task 5',
-    description: 'This is test task 5',
-    date: new Date().toLocaleDateString()
-  },
-  {
-    id: 6,
-    title: 'Task 6',
-    description: 'This is test task 6',
-    date: new Date().toLocaleDateString()
-  },
-  {
-    id: 7,
-    title: 'Task 7',
-    description: 'This is test task 7',
-    date: new Date().toLocaleDateString()
-  }];
-
+  function getButtonHtml() {
+    return (
+      <Link to={"/create-task"}>
+      <button class="button"><i class="fas fa-plus"></i></button>
+      </Link>
+    )
+  }
 
   return (
+    <BrowserRouter>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"></link>
     <div id="content">
       <div id="whiteboard">
         <div id="text">
           <h2>My Task List</h2>
         </div>
         <div class="row">
-          <ListTask myTaskList={taskList} />
+          <Routes>
+            <Route path="/" element={<ListTask />} />
+            <Route path="/board-tasks" element={<ListTask />} />
+            <Route path="/create-task" element={<CreateTask />} />
+          </Routes>
         </div>
         <div id="eraser"></div>
         <div id="red-pen"></div>
         <div id="blue-pen"></div>
+        {getButtonHtml()}
       </div>
     </div>
+    </BrowserRouter>
   );
 }
 

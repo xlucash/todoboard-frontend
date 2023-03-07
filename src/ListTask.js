@@ -1,9 +1,24 @@
-import { useState } from "react";
+import axios from 'axios'
+import { useEffect, useState } from "react";
 import Task from "./Task";
 import './App.css'
 
-export default function ListTask({myTaskList}) {
+export default function ListTask() {
     const [ detailId, updateDetailId ] = useState('');
+    const [ myTaskList, updateMyTaskList ] = useState([]);
+
+    useEffect(() => {
+        console.log("Retrieve the tasks");
+        axios
+            .get("http://localhost:8080/api/tasks")
+            .then(response => {
+                updateMyTaskList(response.data);
+                console.log(response.data);
+            })
+            .catch(e => {
+                console.log(e);
+            })
+    }, []);
     
     function handleTaskClick(id) {
         console.log('Task id ' + id);
@@ -28,7 +43,7 @@ export default function ListTask({myTaskList}) {
                     <h4>Detail Task</h4>
                     <div>Name: {detailTask.title}</div>
                     <div>Description: {detailTask.description}</div>
-                    <div>Date: {detailTask.date}</div>
+                    <div>Date: {detailTask.doneByDate}</div>
                 </div>
             )
         } else {
