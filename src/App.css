@@ -76,8 +76,46 @@
   transition-duration: 0.4s;
 }
 
+.buttondelete {
+  background-color: #e98b8b;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 40%;
+  transition-duration: 0.4s;
+}
+
+.buttonedit {
+  background-color: #8bdee9;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 40%;
+  transition-duration: 0.4s;
+}
+
 .button:hover {
   background-color: #023603; /* Green */
+  color: white;
+}
+
+.buttondelete:hover {
+  background-color: #360202; /* Green */
+  color: white;
+}
+
+.buttonedit:hover {
+  background-color: #022a36; /* Green */
   color: white;
 }
 
