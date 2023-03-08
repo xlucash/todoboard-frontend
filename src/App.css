@@ -62,8 +62,8 @@
   position: absolute;
   height: 50px;
   width: 50px;
-  bottom: 0px;
-  right: 10px;
+  bottom: 30px;
+  right: 30px;
   border: none;
   color: white;
   padding: 10px;
@@ -74,6 +74,7 @@
   margin: 4px 2px;
   border-radius: 40%;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .buttondelete {
@@ -88,6 +89,7 @@
   margin: 4px 2px;
   border-radius: 40%;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .buttonedit {
@@ -102,6 +104,7 @@
   margin: 4px 2px;
   border-radius: 40%;
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -311,4 +314,102 @@ a:hover, a:focus {
 }
 .card[data-color="orange"] .category {
     color: #e95e37;
+}
+
+.center {
+  margin: auto;
+  width: 25%;
+  border: 3px solid #7c7e79;
+  padding: 10px;
+}
+
+form {
+	margin: auto;
+	text-align: left;
+	background: #fff;
+	width: 310px;
+	height: 470px;
+	border-radius: 5px;
+	padding: 30px 20px 0 20px;
+	box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+	box-sizing: border-box;
+}
+
+label {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #838383;
+	margin-bottom: 40px;
+}
+
+label > span {
+	padding-top: 3px;
+	display: block;
+	font-weight: 400;
+	font-size: 9px;
+}
+
+h4 {
+	font-family: 'Gill Sans', sans-serif;
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #000000;
+	margin-bottom: 30px;
+}
+
+input,
+button{
+	outline: none !important; 
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid #a8aee4;
+	width: 85%;
+	font-family: 'Gill Sans', sans-serif;
+	color: #000000;
+	text-align: left;
+	font-size: 21px;
+	font-weight:100;
+	margin-bottom:25px;
+}
+
+
+button.form-btn {
+	width: 50%;
+	height: 60px;
+	bottom: 0;
+	border: 0;
+	font-family: 'Gill Sans', sans-serif;
+	font-size: 24px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+button.form-btn.sx {
+	left: 0;
+	border-radius: 0 0 0 5px;
+	background-color: rgba(189, 231, 255, 0.897);
+	color: #fff;
+	transition:all 0.3s linear;
+}
+
+button.form-btn.sx:hover {
+	background-color:rgba(0, 89, 255, 0.349);
+	color: #fff;
+}
+
+button.form-btn.dx {
+	right: 0;
+	border-radius: 0 0 5px 0;
+	background-color: #6668bdbb;
+	color: #fff;
+  transition:all 0.3s linear;
+}
+
+button.form-btn.dx:hover {
+	background-color:rgba(31, 71, 151, 0.349);
+	color: #fff;
 }

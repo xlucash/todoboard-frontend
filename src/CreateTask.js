@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import './App.css';
 
 export default function CreateTask() {
     const titleElement = useRef(null);
@@ -38,8 +39,8 @@ export default function CreateTask() {
 
     return (
         <div>
-            <h4>Create a new task</h4>
             <form>
+                <h4>Create a new task</h4>
                 <label htmlFor='title'>Title</label><br/>
                 <input type='text' name='title' ref={titleElement}></input><br/>
                 <label htmlFor='description'>Description</label><br/>
@@ -48,9 +49,11 @@ export default function CreateTask() {
                 <input type='date' name='doneByDate' ref={dateElement}></input><br/>
                 <br/>
                 <button 
+                    class="form-btn sx" 
                     onClick={handleCreateClick} 
                     >Create</button>
                 <button 
+                    class="form-btn dx"
                     onClick={homePage}
                     >Return</button>
             </form>
